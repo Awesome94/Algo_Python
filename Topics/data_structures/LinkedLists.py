@@ -8,6 +8,12 @@ class SlinkedList:
         while Slist:
             print(Slist.data_val)
             Slist = Slist.next_node
+    
+    def addItemStart(self, newdata):
+        NewNode = Node(newdata)
+        NewNode.next_node = self.head_node
+        self.head_node == NewNode:
+ 
 
 class Node:
     def __init__(self, data_val = None):
