@@ -27,7 +27,19 @@ class SlinkedList:
         while node.next_node:
             node = node.next_node
         node.next_node = newData
-        
+    
+    def insertBtnTwoNodes(self, midNode, Newdata):
+        NewData = Node(Newdata)
+        if not midNode:
+            return
+        NewData.next_node = midNode.next_node
+        midNode.next_node = NewData
+    
+    def deleteNode(self, removeKey):
+        if removeKey and removeKey.next_node:
+            removeKey = removeKey.next_node
+        else:
+            None
 
 
 One = SlinkedList()
@@ -41,5 +53,6 @@ Three.next_node= Two
 Two.next_node = Four
 One.addItemStart(9)
 One.addItemEnd(19)
+One.deleteNode(19)
 
 One.printList()
