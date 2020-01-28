@@ -36,6 +36,23 @@ class SlinkedList:
         midNode.next_node = NewData
     
     def deleteNode(self, removeKey):
+        HeadVal = self.head_node
+        if HeadVal is not None:
+            if HeadVal.data == removeKey:
+                self.head_node = HeadVal.next_node
+                HeadVal = None
+                return
+        while HeadVal is not None:
+            if HeadVal.data == removeKey:
+                break
+            prev = HeadVal
+            HeadVal = HeadVal.next_node
+        
+        if HeadVal == None:
+            return
+        prev.next_val = HeadVal.next_node
+        HeadVal = None
+
         if removeKey and removeKey.next_node:
             removeKey = removeKey.next_node
         else:
