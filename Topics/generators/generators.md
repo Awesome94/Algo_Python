@@ -1,4 +1,4 @@
-Generators and Lists 
+## Generators and Lists 
 Generators optimize memory and are represented by the () around a generator expression.
 Having [] instead of () will generate a list instead.
 Yield Statement 
@@ -33,7 +33,8 @@ def is_palindrome(num):
     else:
         return False
 
-``` Infinite Sequence Generator```
+### Infinite Sequence Generator
+``` python
 def infinite_palindromes():
     nums = 0
     while True:
@@ -47,4 +48,5 @@ pal_gen = infinite_palindromes()
 
 for i in pal_gen:
     digits = len(str(i))
-    pal_gen.send(10 ** (digits))    
+    pal_gen.send(10 ** (digits))
+```
