@@ -57,6 +57,17 @@ class SlinkedList:
             removeKey = removeKey.next_node
         else:
             None
+    
+    def reverse(self):
+        curr = self.head_node
+        prevNode = None
+        nextNode = None
+        while curr:
+            nextNode = curr.next_node
+            curr.next_node = prevNode
+            prevNode = curr
+            curr = nextNode
+        self.head_node = prevNode
 
 
 One = SlinkedList()
