@@ -1,5 +1,5 @@
 class Node:
-    def __init__(self, data):
+    def __init__(self, data=None):
         self.data=data
         self.right = None
         self.left = None
@@ -16,6 +16,7 @@ class Node:
                     self.right = Node(data)
                 else: 
                     self.right.insert(data)
+     
     
     def findval(self, data):
         if not self.data:
@@ -39,10 +40,13 @@ class Node:
         if self.right:
             self.right.print_tree(data)
             
-root = Node(12)
+root = Node(8)
+root.insert(12)
 root.insert(6)
 root.insert(4)
 root.insert(3)
+
+root.print_tree(12)
 
 print(root.findval(7))
 print(root.findval(12))
