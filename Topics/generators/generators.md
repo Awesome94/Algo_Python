@@ -4,8 +4,9 @@ Having [] instead of () will generate a list instead.
 Yield Statement 
 unlike the return statement, the yield statement suspends the function execution but doesn't stop the function from continuing execution like the return statement
 
-After the *next* has been exhausted from the iterator, a StopIteration Error is thrown.
-Forexample.
+After the *next* has been exhausted from the iterator, a `StopIterationError` is thrown.
+For example:
+```
     letters = iter(['a','b','c','d','e'])
     while True:
         try:
@@ -18,8 +19,9 @@ Advanced generator methods include:
     - .throw()
     - .send()
     - .close()
-
+```
 A simple function to demonstrate all the three functions
+```python
 def is_palindrome(num):
     if num // 10 == 0:
         return False
@@ -32,7 +34,7 @@ def is_palindrome(num):
         return True
     else:
         return False
-
+```
 ### Infinite Sequence Generator
 ``` python
 def infinite_palindromes():
