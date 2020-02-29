@@ -12,5 +12,5 @@ def twoSum(nums, target):
             x += 1
     return results
 
-# print(twoSum([3, 2, 4], 6))
+print(twoSum([3, 2, 4], 6))
 
