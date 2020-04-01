@@ -1,4 +1,4 @@
-def spiral(arr: list):
+def spiralTraverse(arr):
     results = []
     if not arr: return results
     x0 = len(arr)
@@ -69,6 +69,6 @@ arr = [
         [7,8,9]
     ]
 arr = [[],[]]
-print(spiral(arr))
+print(spiralTraverse(arr))
 
 [1,2,3,4,8,12,11,10,9,5,6,7]
