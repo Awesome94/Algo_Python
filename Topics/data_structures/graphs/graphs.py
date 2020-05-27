@@ -22,4 +22,18 @@ class graph:
         if vrtx not in self.gdict.keys():
             self.gdict[vrtx] = []
     
+    # def AddEdge(self, edge):
+    #     edge = set(edge)
+    #     (vrtx1, vrtx2) = tuple(edge)
+    #     if vrtx1 in self.gdict:
+    #         self.gdict[vrtx1].append(vrtx2)
+    #     else:
+    #         self.gdict[vrtx1] = [vrtx2]
     
+    def AddEdge(self, edge):
+        edge = set(edge)
+        for vrtx in edge:
+            if vrtx in self.gdict:
+                self.gdict[vrtx].append(vrtx)
+            else:
+                self.gdict[vrtx] = []

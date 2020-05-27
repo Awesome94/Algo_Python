@@ -69,7 +69,6 @@ class SlinkedList:
             curr = nextNode
         self.head_node = prevNode
 
-
 One = SlinkedList()
 One.head_node = Node('One')
 Two = Node('Two')
@@ -84,3 +83,6 @@ One.addItemEnd(19)
 One.deleteNode(19)
 
 One.printList()
+
+def reverse():
+    pass

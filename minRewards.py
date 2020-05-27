@@ -20,6 +20,6 @@ def minRewards(arr):
             min_rewards.append(v)
     return min_rewards
     
-arr = [8,4,2,1,3,6,7,9,5]
+arr = [4, 6, 8, 11]
 print(minRewards(arr))
 

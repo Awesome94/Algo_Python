@@ -1,22 +1,17 @@
-# O(n2) Runtime || O(n) Space
-def GetIndenticalPairs(arr):
-    results = []
-    limit = 1000000000
+# O(n) Runtime || O(n) Space
+def solution(A):
+    out = {}
     counter = 0
-    for x in range(len(arr)):
-        j = 0
-        if arr.count(arr[x]) <= 1:
-            continue
-        while j < len(arr):
-            if arr[x] == arr[j] and x < j:
-                pair = [x, j]
-                counter+=1
-                results.append(pair)
-            if counter >=  limit: return limit
-            j+=1
-    print(results)
-    return len(results)
+    for x in A:
+        if x in out:
+            counter+=out[x]
+            out[x]+=1
+        else:
+            out[x] = 1
+    return counter
 
+A = [3,5,6,3,3,5]
+print(solution(A))
 
-arr = [3,5,6,3,3,5]
-print(GetIndenticalPairs(arr))
+{3: 1}
+1

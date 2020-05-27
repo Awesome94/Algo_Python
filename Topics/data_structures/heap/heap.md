@@ -17,7 +17,7 @@ H = [2,23,1,0,9]
 heapq.heapify(H)
 Print(H)
 
-# Remove irem from heap using `heapop`
+# Remove item from heap using `heapop`
 heapq.heappop(H)
 print(H)
 # Repalacing in a heap
