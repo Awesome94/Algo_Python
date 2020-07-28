@@ -33,3 +33,17 @@ def reverse(head):
     self.head=PrevNode.prev
 
 ```
+
+### Remove Duplicates from Linked List.
+``` python
+    def remove_duplicates(head):
+        node = head
+        collection = []
+        while node:
+            if node in collection:
+                node.prev.next = node.next
+            else:
+                collection.append(node)
+            node = node.next
+            
+```
